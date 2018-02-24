@@ -25,7 +25,7 @@ public class Seeker {
 	public int current_index_;
 	
 	/* maximum move map length */
-	final int MAX_MOVE_LENGTH_ = 200;
+	final int MAX_MOVE_LENGTH_ = 400;
 	
 	/* constructor, generate random movement list */
 	public Seeker(int _r, int _c){

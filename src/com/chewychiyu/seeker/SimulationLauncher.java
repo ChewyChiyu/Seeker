@@ -10,8 +10,8 @@ import java.awt.Dimension;
 public class SimulationLauncher {
 	
 	/* rows and cols of grid_ in simulation */
-	final int ROWS_ = 50;
-	final int COLS_ = 50;
+	final int ROWS_ = 100;
+	final int COLS_ = 100;
 	
 	/* New JVM thread */
 	public static void main(String[] args){
