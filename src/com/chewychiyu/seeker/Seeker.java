@@ -116,7 +116,11 @@ public class Seeker {
 	public void _calculate_fitness(int _target_r, int _target_c, double _fitness_scale){
 		int _delta_c = initial_c_ - Math.abs(c_ - _target_c);
 		int _delta_r = initial_r_ - Math.abs(r_ - _target_r);
-		fitness_ = Math.pow(_fitness_scale, (_delta_r + _delta_c)) ;
+		fitness_ += _delta_c + _delta_r;
+		if(Math.abs(c_ - _target_c)==0&&Math.abs(r_ - _target_r)==0){
+			fitness_ += ( MAX_MOVE_LENGTH_ - current_index_ );
+		}
+		fitness_ = Math.pow(_fitness_scale, fitness_) ;
 		current_index_ = -1;
 	}
 	

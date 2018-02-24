@@ -27,7 +27,7 @@ public class Simulation extends JPanel{
 	/* thread for engine , runnable for cycle, sleep time for delay*/
 	Thread engine_;
 	Runnable cycle_;
-	final int SLEEP_TIME_ = 10;
+	final int SLEEP_TIME_ = 5;
 	boolean run_cycle_;
 	
 	/* the terrain for the simulation will be represented by a 2d array ( int ) */
@@ -57,7 +57,7 @@ public class Simulation extends JPanel{
 		grid_ = new int[_rows][_cols];
 		x_initial_ = _cols/2;
 		y_initial_ = (int)(_rows*.9);
-		TARGET_C_ = (int)(_cols*.2);
+		TARGET_C_ = (int)(_cols*.9);
 		TARGET_R_ = (int)(_rows*.1);
 		seekers_ = new Seeker[MAX_POPULATION_];
 		cycle_ = () -> _cycle();
